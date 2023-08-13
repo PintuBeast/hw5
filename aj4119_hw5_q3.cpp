@@ -127,9 +127,7 @@ int main()
     
     cout<<"Please enter a year and the starting day(Monday=1 to Sunday=7): ";
     cin>>year>>startingDay;
-    //int x= printMonthCalender(numDays,startingDay);
-   // cout<<"\n The last day of the Month is: "<<x;
-    
+
     printYearCalender(year,startingDay);
 
 }
