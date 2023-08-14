@@ -1,18 +1,13 @@
 #include<iostream>
 using namespace std;
 double factorial=1.0;
-void calcFactorial(double& factorial, int num)
-{    
-    factorial *= num; 
-}
 
 double eApprox(int n)
 { 
     double e=1.0;
     factorial=1.0;
     for(int i=1;i<=n;i++)
-    {   
-        calcFactorial(factorial,i);
+    {   factorial *= i;
         e += 1.0/factorial; 
         
     }
