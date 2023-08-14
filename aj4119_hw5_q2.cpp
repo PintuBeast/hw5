@@ -4,13 +4,13 @@ void printShiftedTriangle(int n, int m, char symbol);
 
 void printShiftedTriangle(int n, int m, char symbol)
 {
-    for(int i=1;i<=n;i++)
+    for(int i = 1 ; i <= n ; i++)
     {
-        for(int j=1;j<=m+n-i;j++)
+        for(int j = 1 ; j <= m + n - i ; j++)
         {
             cout<<" ";
         }
-        for(int k=1;k<=2*(i-1)+1;k++)
+        for(int k = 1 ; k <= 2 * (i - 1) + 1 ; k++)
         {
             cout<<symbol;
         }
@@ -23,9 +23,9 @@ void printPineTree(int n, char symbol);
 
 void printPineTree(int n, char symbol)
 {
-    for(int i=1;i<=n;i++)
+    for(int i = 1 ; i <= n ; i++)
     {
-        printShiftedTriangle(i+1,n-i,symbol);
+        printShiftedTriangle(i + 1,n - i,symbol);
        
     }
 

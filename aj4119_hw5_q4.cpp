@@ -7,15 +7,15 @@ void printDivisors(int n);
 
 void printDivisors(int n)
 {
-    string forwardString =" ", backwardString =" ";
-    for(int i=1;i<=sqrt(n);i++)
+    string forwardString = " ", backwardString = " ";
+    for(int i = 1 ; i <= sqrt(n) ; i++)
     {
         if(n % i == 0)
         {
             forwardString = forwardString + " " + to_string(i) ;
-            if(i != n/i)
+            if(i != n / i)
             {
-                backwardString = to_string(n/i) +" "+ backwardString;
+                backwardString = to_string(n / i) +" "+ backwardString;
             }
         }
     }

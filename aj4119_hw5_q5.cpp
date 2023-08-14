@@ -10,11 +10,11 @@ void analyzeDividors(long num, long& outCountDivs, long& outSumDivs)
 {
     outCountDivs = 1;
     outSumDivs = 1;
-    for(long i=2;i<=sqrt(num);i++)
+    for(long i = 2 ; i <= sqrt(num) ; i++)
     {
         if(num % i == 0)
-        {   outCountDivs +=2;
-            outSumDivs += i+ num/i;
+        {   outCountDivs += 2;
+            outSumDivs += i + num / i;
         }
     }
    // cout<<"Number of Divisors:"<<outCountDivs<<"\nSum of Divisors:"<<outSumDivs<<"\n"; 
@@ -24,11 +24,11 @@ bool isPerfect(long num);
 
 bool isPerfect(long num)
 {
-    bool outPerfect=false;
+    bool outPerfect = false;
     analyzeDividors(num, outCountDivs,  outSumDivs);
-    if(outSumDivs==num)
+    if(outSumDivs == num)
     {
-        outPerfect=true;
+        outPerfect = true;
     }
     return outPerfect;
  
@@ -36,18 +36,18 @@ bool isPerfect(long num)
 
 int main()
 {
-    long num,temp=0;;
+    long num,temp = 0;;
     cout<<"Please enter a positive integer >=2: ";
     cin>>num;
-    long i=2;
-    while(i<=num)
+    long i = 2;
+    while(i <= num)
     {   
         if(isPerfect(i))
         {
           //  cout<<"Found Perfect:"<<i<<"\n";
             strPerfect += to_string(i)+" ";
         }
-        else if(outSumDivs<=num && outSumDivs > i)
+        else if(outSumDivs <= num && outSumDivs > i)
         {
             temp = outSumDivs;
             isPerfect(temp);

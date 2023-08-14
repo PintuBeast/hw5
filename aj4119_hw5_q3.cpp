@@ -4,19 +4,19 @@ int printMonthCalender(int numOfDays, int startingDay);
 int printMonthCalender(int numOfDays, int startingDay)
 {
     int dayCounter, dayNumber;
-    dayCounter=startingDay;
-    dayNumber=1;
+    dayCounter = startingDay;
+    dayNumber = 1;
     cout<<"Mon\tTue\tWed\tThr\tFri\tSat\tSun\n";
-    for(int i=1;i<=dayCounter-1;i++)
+    for(int i = 1 ; i <= dayCounter - 1 ; i++)
     {
         cout<<"\t";
     }
-    while(dayNumber<=numOfDays)
+    while(dayNumber <= numOfDays)
     {
         cout<<dayNumber<<"\t";
-        if(dayCounter%7==0)
+        if(dayCounter % 7 == 0)
         {
-            dayCounter=1;
+            dayCounter = 1;
             cout<<"\n";
         }
         else
@@ -25,26 +25,26 @@ int printMonthCalender(int numOfDays, int startingDay)
         }
         dayNumber++;
     }
-    if(dayCounter==1)
+    if(dayCounter == 1)
     {
-        dayCounter=8;
+        dayCounter = 8;
 
     }
     cout<<"\n\n";
-    return dayCounter-1;
+    return (dayCounter - 1);
 
 }
 bool isLeapYear(int year);
 
 bool isLeapYear(int year)
-{   bool isLeap =false;
+{   bool isLeap = false;
     if(year % 400 ==0)
     {
-        isLeap=true;
+        isLeap = true;
     }
-    else if(year % 4==0 && year % 100 !=0)
+    else if(year % 4 == 0 && year % 100 != 0)
     {
-        isLeap=true;
+        isLeap = true;
     }
     return isLeap;
 
@@ -56,7 +56,7 @@ void printYearCalender(int year, int startingDay);
 void printYearCalender(int year, int startingDay)
 {
     
-    for(int i=1;i<=12;i++)
+    for(int i = 1 ; i <= 12 ; i++)
     {
         switch(i)
         {
